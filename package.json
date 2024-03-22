@@ -1,0 +1,29 @@
+{
+  "name": "react-lovely-popup",
+  "version": "1.0.0",
+  "description": "an npm package to handel popup elements in react",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shahriar-30/react-lovely-popup.git"
+  },
+  "keywords": [
+    "npm",
+    "package",
+    "react",
+    "lovely",
+    "popup",
+    "modal",
+    "components"
+  ],
+  "author": "Shahriar Amin Al Siphat",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Shahriar-30/react-lovely-popup/issues"
+  },
+  "homepage": "https://github.com/Shahriar-30/react-lovely-popup#readme"
+}
