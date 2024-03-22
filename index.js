@@ -6,8 +6,7 @@ export function lovelyPopUp({ toggleRef, clickRef, callBack }) {
     let handler = (e) => {
       if (
         !toggleRef.current.contains(e.target) &&
-        e.target !== toggleRef.current &&
-        e.target !== clickRef.current
+        !clickRef.current.contains(e.target)
       ) {
         callBack(false);
       }
