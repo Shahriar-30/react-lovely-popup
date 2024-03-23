@@ -1,6 +1,11 @@
+
+# Demo
+[Demo](https://codesandbox.io/p/sandbox/react-lovely-popup-sjhlhs?file=%2Fsrc%2FApp.js%3A1%2C1-43%2C1)
+
 # react-lovely-popup
 
 react-lovely-popup provides a lightweight React component for creating lovely popups with ease. With simple integration and flexible options, it enhances user experience by allowing seamless toggling of popups triggered by various UI elements.
+
 
 ## Installation
 
@@ -9,75 +14,84 @@ You can install this package via npm.
 ```bash
   npm i react-lovely-popup
 ```
-
+    
 ## Usage
 
 Here's how you can use your package in your code:
-
 ```javascript
-// The package you need to import
+// The package you need to import 
 import { lovelyPopUp } from "react-lovely-popup";
+
 ```
 
 
 # Documentation
 
 ## lovelyPopUp({})
-
 This function sets up a lovely popup component.
 
 ## Parameters
-
 An object containing options for configuring the lovely popup component.
 
-## buttonRef:
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `clickRef` | `ref/ele` |`A React ref for the toggle button or element that triggers the popup.`|
+| `toggleRef` | `ref/ele` |`A React ref for the popup itself.`|
+| `callBack` | `string` |`A callback function that return a boolean value indicating whether the popup should be open or closed.`|
 
-A React ref for the toggle button or element that triggers the popup.
-
-## toggleRef:
-
-A React ref for the popup itself.
-
-## callBack:
-
-A callback function that return a boolean value indicating whether the popup should be open or closed.
 
 ## Example
 
 Here's how you can use your package in your code:
-
 ```javascript
-import { useRef, useState } from "react";
-// This is the package you need to import
+import React, { useRef, useState } from "react";
+// import react-lovely-popup
 import { lovelyPopUp } from "react-lovely-popup";
+import "./App.css";
 
 function App() {
   const [open, setOpen] = useState(false);
 
-  const btnRef = useRef();
-  const popupRef = useRef();
+  let btn = useRef();
+  let toggle = useRef();
 
+  // react-lovely-popup
   lovelyPopUp({
-    clickRef: btnRef,
-    toggleRef: popupRef,
-    callBack: function (e) {
+    clickRef: btn,
+    toggleRef: toggle,
+    callBack: (e) => {
       setOpen(e);
-    }
+    },
   });
 
   return (
     <>
-      {/* you have to add the onClick Event for basic toggle */}
-      <button ref={btnRef} onClick={() => setOpen(!open)}>
-        Toggle Popup
-      </button>
-      <div ref={popupRef}>{open && <p>I am a popup</p>}</div>
+      <div className="container center">
+        <div className="box center">
+          {/* must add onClick function to the button in order to work properly */}
+          <button ref={btn} onClick={() => setOpen(!open)}>
+            Click Me
+          </button>
+          <div ref={toggle}>
+            {open && (
+              <div className="toggle center">
+                <p>Toggle Ele</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
 
 export default App;
+
+
+
 ```
+
+
 
 ## License
 
