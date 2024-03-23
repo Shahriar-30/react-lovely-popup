@@ -37,7 +37,7 @@ An object containing options for configuring the lovely popup component.
 | :-------- | :------- | :------------------------- |
 | `clickRef` | `ref/ele` |`A React ref for the toggle button or element that triggers the popup.`|
 | `toggleRef` | `ref/ele` |`A React ref for the popup itself.`|
-| `callBack` | `string` |`A callback function that return a boolean value indicating whether the popup should be open or closed.`|
+| `callBack` | `function` |`A callback function that return a boolean value indicating whether the popup should be open or closed.`|
 
 
 ## Example
