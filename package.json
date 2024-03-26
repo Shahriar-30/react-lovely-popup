@@ -18,7 +18,8 @@
     "lovely",
     "popup",
     "modal",
-    "components"
+    "components",
+    "lovely popup"
   ],
   "author": "Shahriar Amin Al Siphat",
   "license": "Apache-2.0",
