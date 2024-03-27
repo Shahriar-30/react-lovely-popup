@@ -16,10 +16,10 @@ export function lovelyPopUp({ toggleRef, clickRef, callBack }) {
       }
     };
 
-    document.addEventListener("mousedown", handler);
+    document.addEventListener("click", handler);
 
     return () => {
-      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("click", handler);
     };
   }, [toggleRef, clickRef]);
 

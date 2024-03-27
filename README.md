@@ -4,7 +4,7 @@
 
 # react-lovely-popup
 
-react-lovely-popup provides a lightweight function for creating lovely popups. With simple integration and flexible options, it enhances user experience by allowing seamless toggling of popups triggered by various UI elements.
+ [react-lovely-popup](https://www.npmjs.com/package/react-lovely-popup) provides a lightweight function for creating lovely popups. With simple integration and flexible options, it enhances user experience by allowing seamless toggling of popups triggered by various UI elements.
 
 ## Installation
 
@@ -33,10 +33,10 @@ This function sets up a lovely popup component.
 
 An object containing options for configuring the lovely popup component.
 
-| Parameter   | Type       | Description                                                                                                            |
-| :---------- | :--------- | :--------------------------------------------------------------------------------------------------------------------- |
-| `clickRef`  | `ref/ele`  | `A React ref for the toggle button or element that triggers the popup.`                                                |
-| `toggleRef` | `ref/ele`  | `A React ref for the popup itself.`                                                                                    |
+| Parameter   | Type       | Description                                                                                                                  |
+| :---------- | :--------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| `clickRef`  | `ref/ele`  | `A React ref for the toggle button or element that triggers the popup.`                                                      |
+| `toggleRef` | `ref/ele`  | `A React ref for the popup itself.`                                                                                          |
 | `callBack`  | `function` | `A callback function that return a boolean value indicating whether the popup should be open or closed. default value false` |
 
 ## Example
@@ -66,17 +66,13 @@ function App() {
 
   return (
     <>
-      <div className="container center">
-        <div className="box center">
-          <button ref={btn}>Click Me</button>
-          <div ref={toggle}>
-            {open && (
-              <div className="toggle center">
-                <p>Toggle Ele</p>
-              </div>
-            )}
+      <button ref={btn}>Click Me</button>
+      <div ref={toggle}>
+        {open && (
+          <div>
+            <p>Toggle Ele</p>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
@@ -88,3 +84,7 @@ export default App;
 ## License
 
 [Apache-2.0](https://github.com/Shahriar-30/react-lovely-popup?tab=Apache-2.0-1-ov-file#readme)
+
+
+## Feedback
+[Twitter](https://twitter.com/AlSiphat11)
